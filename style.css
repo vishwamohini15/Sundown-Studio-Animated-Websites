@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#page1{
+   min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    /* background-color: red; */
+    position: relative;
+    padding: 0 30px;
+}
+nav{
+    padding: 2vw 2vw;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rebeccapurple; */
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#nav-part2 a{
+    position: relative;
+    padding: 10px 20px;
+    border: 1.5px solid rgb(20, 19, 19);
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+transition: all ease 0.2s;
+overflow: hidden;
+
+
+    color: rgb(22, 22, 22);
+}
+#nav-part2 a::after {
+content:'' ;
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: black;
+left: 0;
+bottom: -100%;
+border-radius: 50%;
+transition: all ease 0.2s;
+
+
+}
+#nav-part2 a:hover::after{
+    bottom: 0;
+    /* color: white; */
+    border-radius: 0;
+}
+#nav-part2 a{
+color: rgb(37, 36, 36);
+position: relative;
+z-index: 9;
+
+}
+#nav-part2:hover a{
+color: white;
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 3px solid grey;
+    padding-bottom: 28px;
+}
+#left h3{
+width: 35vw;
+font-size: 25px;
+line-height: 30px;
+}
+#center h1{
+    /* width: 25vw; */
+    text-align: end;
+    font-size: 110px;
+    line-height: 90px;
+}
+
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+
+#hero-shape{
+    position: absolute;
+    height: 36vh;
+    width: 49vw;
+    
+    right: 0;
+    top: 70vh;
+}
+#hero1{
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    background:linear-gradient(#FE320A,#fe3f0a) ;
+
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+position: absolute;
+/* animation-name: anime;
+animation-duration: 3s;
+animation-iteration-count: infinite; */
+}
+#hero2{
+    height: 30vh;
+    width: 30vw;
+    /* background-color: blue; */
+    background:linear-gradient(#FE320A,#fe3f0a) ;
+
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  
+}
+#hero3{
+    height: 30vh;
+    width: 30vw;
+    background:linear-gradient(#FE320A,#fe3f0a) ;
+    filter: blur(20px);
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1{
+    from{
+        transform: translate(-10%, -10%);
+    }
+    to{
+        transform: translate(30%, -30%);
+    }
+}
+@keyframes anime2{
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%, -30%);
+    }
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 6vw 0;
+    position: relative;
+}
+#moving-text h1{
+    font-size: 65px;
+    /* background-color: greenyellow; */
+    display: inline-block;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+
+}
+#moving-text::-webkit-scrollbar{
+display: none;
+}
+#gola{
+    height: 40px;
+    width: 40px;
+    background-color: #fe3f0a;
+    border-radius: 50%;
+    display: inline-block;
+    margin:0 16px ;
+}
+#container{
+    /* margin-bottom: 30px; */
+    /* background-color:black; */
+    white-space:nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+#page2-buttom{
+    background-color: #EFEAE3;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5vw;
+    position: relative;
+    /* z-index: 9; */
+
+}
+#page2-buttom h1{
+font-size: 60px;
+width: 60%;
+}
+#bottom-part2{
+width: 22%;
+/* background-color: greenyellow; */
+}
+#bottom-part2 img{
+width: 100%;
+border-radius: 20px;
+}
+#bottom-part2 p{
+font-weight: 300;
+font-size: 18px;
+margin-top: 20px;
+
+}
+#page2 #gooye{
+    height:32vw ;
+    width: 32vw;
+    background: linear-gradient(to top right,#fc1702,#fa6114);
+    position: absolute;
+    top: 58%;
+    left: 20%;
+    filter: blur(20px);
+    border-radius: 50%;
+    animation-name: gooye;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gooye {
+    from{
+        transform: translate(10%, -10% ) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+/* #gooye1{
+    height: 100%;
+    width: 100%;
+} */
+
+#page3{
+   min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+.elem{
+    height: 140px;
+    width: 100%;
+    /* background-color: yellow; */
+    border-bottom: 2px solid rgb(199, 197, 197);
+    /* border-top: 1px solid gray; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+.elem h2{
+    font-size: 50px;
+    /* font-weight: 600; */
+    position: relative;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color:orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+.elem:hover .overlay{
+top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
